@@ -2,7 +2,6 @@ package db
 
 import (
 	"context"
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/require"
@@ -10,9 +9,6 @@ import (
 
 func TestTransferTx(t *testing.T) {
 	store := NewStore(testDB)
-	fmt.Println(store)
-	fmt.Println(store.db)
-	fmt.Println(store.Queries)
 	account1 := createRandomAccount(t)
 	account2 := createRandomAccount(t)
 
