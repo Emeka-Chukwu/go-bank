@@ -12,7 +12,7 @@ RETURNING *;
 
 -- name: GetAccount :one
 SELECT * FROM accounts
-WHERE id = ? LIMIT 1;
+WHERE id = $1 LIMIT 1;
 
 
 
@@ -23,10 +23,11 @@ LIMIT $1
 OFFSET $2;
 
 
--- name: UpdateAccount :exec
+-- name: UpdateAccount :one
 UPDATE accounts
 set balance = $2
-WHERE id = $1;
+WHERE id = $1
+RETURNING *;
 
 
 -- name: DeleteAccount :exec
