@@ -1,5 +1,5 @@
 
-name: ci-test
+name: Run unit test
 
 on:
   push:
