@@ -11,5 +11,5 @@ option go_package = "simplebank/pb";
 
 service SimpleBank{
     rpc  CreateUser (CreateUserRequest) returns (CreateUserResponse){}
-    rpc  LoginUser (CreateUserRequest) returns (LoginUserResponse){}
+    rpc  LoginUser (LoginUserRequest) returns (LoginUserResponse){}
 }
