@@ -71,7 +71,6 @@ func HttpLogger(handler http.Handler) http.Handler {
 		if rec.StatusCode != http.StatusOK {
 			logger = log.Error().Bytes("body", rec.Body)
 		}
-
 		logger.Str("protocol", "http").
 			Str("method", req.Method).
 			Str("path", req.RequestURI).
