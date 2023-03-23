@@ -29,7 +29,7 @@ func RandomString(n int) string {
 		c := alphabets[rand.Intn(k)]
 		sb.WriteByte(c)
 	}
-	fmt.Println(sb.String())
+	// fmt.Println(sb.String())
 	return sb.String()
 }
 
