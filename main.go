@@ -68,7 +68,7 @@ func main() {
 func runDBMigration(migrationURL string, dbSource string) {
 	migration, err := migrate.New(migrationURL, dbSource)
 	if err != nil {
-		log.Fatal().Msg("cannot create new migrate instance:")
+		log.Fatal().Msgf("cannot create new migrate instance: %w", err)
 	}
 	if err = migration.Up(); err != nil && err != migrate.ErrNoChange {
 		log.Fatal().Msg("failed to run migration up:")
